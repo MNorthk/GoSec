@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GoSecModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LoginPsw">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="StudentLoginPsw" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="StudentBasePsw" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoginSchoolPsw">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="StudentPsw" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentInfo">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="StudentName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="StudentClass" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="StudentAdress" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="StudentPhone" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="StudentSendNum" Type="int" Nullable="false" />
+          <Property Name="StudentRecNum" Type="int" Nullable="false" />
+          <Property Name="StudentLevel" Type="int" Nullable="false" />
+          <Property Name="StudentSex" Type="nvarchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GoSecModelStoreContainer">
+          <EntitySet Name="LoginPsw" EntityType="Self.LoginPsw" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoginSchoolPsw" EntityType="Self.LoginSchoolPsw" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentInfo" EntityType="Self.StudentInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GoSecModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LoginPsw">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentLoginPsw" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentBasePsw" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoginSchoolPsw">
+          <Key>
+            <PropertyRef Name="StudentID" />
+          </Key>
+          <Property Name="StudentID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentPsw" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentInfo">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentClass" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentAdress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentPhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StudentSendNum" Type="Int32" Nullable="false" />
+          <Property Name="StudentRecNum" Type="Int32" Nullable="false" />
+          <Property Name="StudentLevel" Type="Int32" Nullable="false" />
+          <Property Name="StudentSex" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GoSecEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LoginPsw" EntityType="Self.LoginPsw" />
+          <EntitySet Name="LoginSchoolPsw" EntityType="Self.LoginSchoolPsw" />
+          <EntitySet Name="StudentInfo" EntityType="Self.StudentInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GoSecModelStoreContainer" CdmEntityContainer="GoSecEntities">
+          <EntitySetMapping Name="LoginPsw">
+            <EntityTypeMapping TypeName="GoSecModel.LoginPsw">
+              <MappingFragment StoreEntitySet="LoginPsw">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="StudentLoginPsw" ColumnName="StudentLoginPsw" />
+                <ScalarProperty Name="StudentBasePsw" ColumnName="StudentBasePsw" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoginSchoolPsw">
+            <EntityTypeMapping TypeName="GoSecModel.LoginSchoolPsw">
+              <MappingFragment StoreEntitySet="LoginSchoolPsw">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentPsw" ColumnName="StudentPsw" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentInfo">
+            <EntityTypeMapping TypeName="GoSecModel.StudentInfo">
+              <MappingFragment StoreEntitySet="StudentInfo">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="StudentClass" ColumnName="StudentClass" />
+                <ScalarProperty Name="StudentAdress" ColumnName="StudentAdress" />
+                <ScalarProperty Name="StudentPhone" ColumnName="StudentPhone" />
+                <ScalarProperty Name="StudentSendNum" ColumnName="StudentSendNum" />
+                <ScalarProperty Name="StudentRecNum" ColumnName="StudentRecNum" />
+                <ScalarProperty Name="StudentLevel" ColumnName="StudentLevel" />
+                <ScalarProperty Name="StudentSex" ColumnName="StudentSex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

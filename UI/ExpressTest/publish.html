@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css"/>
+	 
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js">
+	</script>
+	
+	 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script> 
+	 <script type="text/javascript" src='js/publish.js'></script>
+ 	 
+	<title>--------</title>
+</head>
+<body>
+	<div data-role="page" >
+		<div data-role="header"  >
+			<h1>测试专用</h1>
+			<button class="ui-btn-left ui-btn-inline ui-btn  ui-icon-refresh ui-btn-icon-left "  >刷新</button>
+			  <div  class="ui-btn-right   ui-btn-inline ui-mini ui-corner-all  ">
+   				 <select  data-native-menu="false">
+   				 	<option>xxxx</option>
+   				    <option>选项2</option>
+   				    <option>选项3</option>
+
+   				 </select>
+			 </div>
+			
+		</div>
+		<div role='main' class="ui-content">
+			<div class="ui-field-contain">
+				<form action="" method="post"> 
+					<input type="text" id="eAdr" placeholder="敢问快递在何方~0~"/>
+					<input type="text" id="tAdr" placeholder="花果山水帘洞收？"/>
+					<textarea id="gInfo" placeholder="客官！撒家需要备注!但不需要密码！！"></textarea>  
+				 			 
+						<label>过期时间：</label>
+						<div class="ui-btn-inline">
+							
+						
+						<input type="text" id="time-h" placeholder='几时'/>
+						<input type="text" id="time-m" placeholder='几分'/>
+						</div>
+						<input type="button" class="ui-btn " value="确定发布" id="pub" onclick="bfPub()"/> 
+						 <input type="reset" class="ui-btn" value="重置" />
+
+
+					 
+
+ 					
+				</form>
+				
+			</div>
+		</div>
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="info.html" data-icon="star" class="ui-btn-inactive">我要取</a></li>
+					<li><a href="" data-icon="star" class="ui-btn-active">找人取</a></li>
+					<li><a href="# " data-icon="star" class="ui-btn-inactive">XXX</a></li>
+					
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

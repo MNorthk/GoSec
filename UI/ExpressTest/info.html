@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css"/>
+	<link rel="stylesheet" type="text/css" href="css/info.css"/>
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js">
+	</script>
+    <script type="text/javascript" src='js/info.js'></script>
+	 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script> 
+
+
+	<title>--------</title>
+</head>
+<body>
+	<div data-role="page"  >
+		<div data-role="header"  >
+			<h1>测试专用</h1>
+            <input type="hidden" id="LoginMes"/>
+			<button class="ui-btn-left ui-btn-inline ui-btn  ui-icon-refresh ui-btn-icon-left " onclick="getInfo()">刷新</button>
+			  <div  class="ui-btn-right   ui-btn-inline ui-mini ui-corner-all  " id="rightK">
+   				 <select  data-native-menu="false" >
+   				 	<option>xxxx</option>
+   				    <option>选项2</option>
+   				    <option>选项3</option>
+
+
+   				 </select>
+			 </div>
+			
+		</div>
+		<div role='main' class="ui-content">
+			<div class="ui-field-contain">
+			
+				<ul data-role="listview" data-inset="true" id="infolist">
+					<li>
+						<a href=""><h2>来自 东区 的 XXX 有快递在 芝麻邦</h2>
+						<p >大概有2斤~~求帮取啊~~</p></a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="" data-icon="star" class="ui-btn-active">我要取</a></li>
+					<li><a href="publish.html" data-icon="star" class="ui-btn-inactive">找人取</a></li>
+					<li><a href="# " data-icon="star" class="ui-btn-inactive">XXX</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

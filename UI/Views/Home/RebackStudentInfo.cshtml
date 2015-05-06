@@ -1,0 +1,49 @@
+﻿@model Model.ComeBackStudentInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RebackStudentInfo</title>
+</head>
+<body>
+    <div>
+        @using(Html.BeginForm("ok","Home",FormMethod.Post))
+        {
+            @Html.Label("StudentId")
+            @Html.TextBoxFor(u=>u.StudentId)
+            <br/>
+             @Html.Label("StudentName")
+            @Html.TextBoxFor(u=>u.StudentName)
+            <br/>
+             @Html.Label("StudentSex")
+            @Html.TextBoxFor(u=>u.StudentSex)
+            <br/>
+             @Html.Label("StudentClass")
+            @Html.TextBoxFor(u=>u.StudentClass)
+            <br/>
+             @Html.Label("StudentAdress")
+            @Html.TextBoxFor(u=>u.StudentAdress)
+            <br/>
+             @Html.Label("StudentLoginPsw")
+            @Html.TextBoxFor(u=>u.StudentLoginPsw)
+            <br/>
+             @Html.Label("StudentPhone")
+            @Html.TextBoxFor(u=>u.StudentPhone)
+            <br/>
+            @Html.Label("StudentPhone")
+            @Html.TextBoxFor(u => u.LoginImage)
+    <br />
+    <input type="submit" value="提交" />
+        }
+        <img src="~/LoginImage.ashx" alt="Alternate Text" />
+
+        
+    </div>
+</body>
+</html>

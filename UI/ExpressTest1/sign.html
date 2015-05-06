@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css"/>
+	<link rel="stylesheet" type="text/css" href="css/1.css"/>
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/1.js"></script>
+
+	 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script> 
+    <script src="../Script/pmjm.js"></script>
+</head>
+<body>
+		<div data-role="page"  >
+		<div data-role="header" data-position="fixed">
+			<h1>测试用-注册</h1>
+			
+		</div>
+		<div role="main" class="ui-content">
+			<div class="ui-field-contain">
+				<div>
+				 	 
+                    <form action="/Home/ok" method="post">
+                        <div id="regi-form"  >
+                            <input type="text" name="StudentId" id="re-number" placeholder="学号" disabled="true" />
+                            <input type="text" id="re-name" name="StudentName" placeholder="姓名" />
+                            <!--<input type="text" id="re-nickname" name="nickname" placeholder="昵称"/>-->
+                            <input type="text" id="re-class" name="StudentClass" placeholder="班级" />
+                            <!--<input type="text" id="re-knum" name="knum" placeholder="考生号"/>
+            <input type="text" id="re-status" name="status" placeholder="学籍状态"/>
+            <input type="text" id="re-idnum" name="idnum" placeholder="身份证号"/>-->
+                            <input type="text" id="re-tel" name="StudentPhone" placeholder="手机号" />
+                            <!--<input type="text"  id="re-email" name="email" placeholder="邮箱"/>-->
+                            <select data-native-menu="false" name="StudentSex" id="re-sex">
+                                <option value="男">汉纸</option>
+                                <option value="女">萌妹</option>
+                            </select>
+
+                            <!--<select  data-native-menu="false" name="sc"  id="re-sc">
+                    <option value="东区">东区</option>
+                    <option value="西区">西区</option>
+                    <option value="老校区">老校区 </option>
+
+            </select>-->
+                            <input type="text" id="re-ss" name="StudentAdress" placeholder="宿舍地址" />
+
+
+                            <input type="password" id="re-pass1" name="StudentLoginPsw" placeholder="设置密码" />
+                            <!--<input type="password"  id="re-pass2" placeholder="确认密码"/>-->
+                            <!--<a href="LoginImage.ashx">../LoginImage.ashx</a>-->
+                            <img src="../LoginImage.ashx" />
+                            <input type="text" id="re-veri" name="LoginImage" placeholder="请输入验证码" />
+                            <input type="button" class="ui-btn" id="bf-btn" value="提交" onclick="bfSubmit()" />
+                            <input type="reset" class="ui-btn" id="bf-btn" value="重置" />
+                        </div>
+                    </form>
+				 	<!-- 注册框 -->
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="login.html" data-icon="star" class="ui-btn-inactive">登陆</a></li>
+					<li><a href="" data-icon="grid" class="ui-btn-active">注册</a></li>
+					<li><a href="about.html" data-icon="grid" class="ui-btn-inactive">关于我们</a></li>
+				</ul>
+				
+			</div>
+			
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script src="Script/pmjm.js"></script>
+    <script type="text/javascript">
+
+        var getInfo = function () {
+            //  $.jsonp({
+            //       url:
+            //     //  callback: 'callback',
+
+            //       // complete: function() {
+            //       //   //    hideLoadingMsg(); // 数据获取完成后，需要做的事，此为隐藏读取数据的滚动条。
+            //       //   },
+            //       success: function(data) {
+            //           // 处理数据的代码...
+            //           alert("ok");
+            //     }
+            // });
+
+
+            $.ajax({
+                url: "http://localhost:61674/goods/setGoodsInfoIn",
+                type : "post",
+                //dataType: "jsonp",
+                // jsonp:"jsonpcallback",
+                      data: {
+                          masterId: '04132057',
+                          expressAdress: '中通',
+                          takeGoodsAdress:"东asda是旭",
+                              goodsInfo:"啊实打实的亚",
+                          takeTime:"15:25"
+                 },
+                success: function (data) {
+                    //var i = 0;
+                    //var b = 2;
+                    alert(data);
+                }
+            });
+
+        }
+
+
+
+    </script>
+    <style type="text/css">
+        .header {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+        }
+
+        .page {
+            padding: 23px 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    </head>
+    <body>
+
+        <div data-role="page" id="pageone" class="page">
+            <div data-role="header" class="header">
+                <h1>欢迎访问我的主页</h1>
+            </div>
+
+            <div data-role="content">
+                <div id="kang">111</div>
+                <p>点击链接来查看流效果。</p>
+                <a href="mobile2.html" data-transition="flow">转到页面二</a>
+                <br />
+                <button onclick="getInfo()">转到页面二弹窗</button>
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk   <br />
+                kkk
+            </div>
+
+            <div data-role="footer" class="footer">
+                <h1>页脚文本</h1>
+            </div>
+        </div>
+    </body>
+</html>

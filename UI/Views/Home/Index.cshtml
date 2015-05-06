@@ -1,0 +1,36 @@
+﻿@model Model.LoginSchoolPsw
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Script/pmjm.js"></script>
+    <script src="~/Script/jquery-1.7.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#submitLogin").click(function () {
+                $("#StudentPsw").val(Encode($("#StudentPsw").val()));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("RebackStudentInfo", "Home", FormMethod.Post))
+        {
+            @Html.TextBoxFor(u=>u.StudentID)
+                <br/>
+            @Html.PasswordFor(u=>u.StudentPsw)
+            <br/>
+            <input type="submit" value="提交" id="submitLogin"/>
+        }
+        
+    </div>
+</body>
+</html>
