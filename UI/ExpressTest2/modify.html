@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css"/>
+	 
+
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js">
+	</script>
+	
+	 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script> 
+ 	<script type="text/javascript" src='js/modify.js'></script>
+
+	<title>--------</title>
+
+</head>
+<body>
+	<div data-role="page"  >
+		<div data-role="header"  >
+			<h1>测试专用</h1>
+			<button class="ui-btn-left ui-btn-inline ui-btn  ui-icon-refresh ui-btn-icon-left " onclick="getInfo()">刷新</button>
+			  <div  class="ui-btn-right   ui-btn-inline ui-mini ui-corner-all  ">
+   				 <select  data-native-menu="false">
+   				 	<option>xxxx</option>
+   				    <option><a href="login.html">登录</a></option>
+   				    <option></a>选项3</option>
+
+   				 </select>
+
+			 </div>
+			
+		</div>
+		<div role='main' class="ui-content">
+			 <form class="infoForm">
+			 	<input type="text" id="infoName" placeholder='姓名' disabled="true" />
+			 	<input type="text" id="infoNum" placeholder='学号' disabled="true" />
+			 	<input type="text" id="infoNickname" placeholder='昵称 ' >
+			 	<input type="text" id="infoAddr" placeholder='你的地址' />
+
+			 	<input type="button" id="yBtn" value="确定修改" onclick="yBtnOnclick()" />
+			 	<input type="button" id="infoPass" value='修改密码'/>
+			 	<!-- 姓名 学号   昵称 地址  密码-->
+			 	<!-- 学号 不可更改 修改密码时通过学号和教务处密码验证-->
+			 </form>
+			 <div id="changePass">
+			 	<input type="text" id="changeNum" placeholder='学号 ' disabled="true" />
+			 	<input type="password" id="newPass" placeholder='教务处密码'  /> 
+			 	<input data-inline="true" type="button" id="changeBtn" value="确定"/>
+			 	<input data-inline="true" type="button" id="changeBtnNo" value="我不改了"/>
+			 </div>
+			 <div id="modifyPass">
+			 	<input type="password" id="newPass" placeholder='新密码'/>
+			 	<input type="password" id="newPass1" placeholder='确认密码'/>
+			 	<input type="button" id="newPassBtn" onclick="newPassClick()" />
+			 </div>
+		</div>
+		<div data-role='footer' data-position='fixed'>
+			<div data-role='navbar'>
+				<ul>
+					<li><a href="index.html" data-icon="star" class="ui-btn-inactive">我要取</a></li>
+					<li><a href="publish.html" data-icon="star" class="ui-btn-inactive">找人取</a></li>
+					<li><a href="" data-icon="star" class="ui-btn-active">修改信息</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

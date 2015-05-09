@@ -1,0 +1,9 @@
+ 
+.infoDiv{
+	border: 1px #ccc solid;
+	margin: 0 auto;
+	text-align: center;
+	font-family: '微软雅黑';
+	font-size: 20px;
+	background-color: rgba(102,153,255,0.2);
+}
