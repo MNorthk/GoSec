@@ -15,6 +15,8 @@ function bfPub() {
         alert("信息有没有填写的嗯");
         return false;
     }
+    h = String(h);
+    m=String(m);
     var ttime = h + ':' + m;
 
     var obj = {
@@ -23,7 +25,7 @@ function bfPub() {
             return $.get(
                   "/Login/getUserId"
                 );
-        }(),
+        },
         //state
         expressAdress: eAddr,
         takeGoodsAdress: tAddr,
