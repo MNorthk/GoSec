@@ -18,14 +18,20 @@ function bfPub() {
     h = String(h);
     m=String(m);
     var ttime = h + ':' + m;
-
+   
+     
+    var id ;
+   
+   $.get(
+                 "/Login/getUserId",function(d){
+                     id=d;}
+               );
+ 
+    
     var obj = {
         //goodsId咋办
-        masterId: function () {
-            return $.get(
-                  "/Login/getUserId"
-                );
-        },
+        goosId:12,
+        masterId: id ,
         //state
         expressAdress: eAddr,
         takeGoodsAdress: tAddr,
@@ -33,7 +39,7 @@ function bfPub() {
         takeTime: ttime
         
     }
-   
+     
     publish(obj);
 
 }
@@ -45,28 +51,28 @@ function publish(obj) {
         alert(gInfo);
         switch(d)
         {
-            case '200':
+            case 'k200':
                 {
                     alert("发布成功~");
                     Location.href = 'index.html';
                     break;
                 }
-            case '204':
+            case 'k204':
                 {
                     aler('时间写的不对吧~');
                     break;
                 }
-            case "201":
+            case "k201":
                 {
                     alert("信息不完整~");
                     break;
                 }
-            case '203':
+            case 'k203':
                 {
-                    aler("登录超时，请重新登录~");
+                    alert("登录超时，请重新登录~");
                     break;
                 }
-            case '202':
+            case 'k202':
                 {
                     alert("信息发布失败，请重试~");
                     break;
